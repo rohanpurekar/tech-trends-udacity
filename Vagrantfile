@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
   
   # consifure the parameters for VirtualBox provider
   config.vm.provider "virtualbox" do |vb|
-    vb.name = "kmaster"
+    vb.name = "kubemaster"
     vb.memory = "2048"
     vb.cpus = 2
     # vb.customize ["modifyvm", :id, "--ioapic", "on"]
