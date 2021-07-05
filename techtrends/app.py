@@ -1,6 +1,6 @@
 import sqlite3
 from sqlite3.dbapi2 import Cursor, connect
-import sys
+import logging, sys
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 import __init__
@@ -25,6 +25,25 @@ def get_post(post_id):
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
 
+logger = logging.getLogger("app")
+logging.basicConfig(level=logging.INFO, format='%(levelname)s:%(name)s:%(asctime)s %(message)s',datefmt='%m/%d/%Y, %I:%M:%S')
+logger.setLevel(logging.INFO)
+handler_debug_formatter = logging.Formatter('%(levelname)s:%(name)s:%(asctime)s:%(message)s', datefmt='%m/%d/%Y, %I:%M:%S,')
+handler_debug = logging.StreamHandler(sys.stdout)
+handler_debug.setLevel(logging.INFO)
+handler_debug.setFormatter(handler_debug_formatter)
+
+handler_err = logging.StreamHandler(sys.stderr)
+handler_err.setLevel(logging.ERROR)
+handler_err.setFormatter(handler_debug_formatter)
+# handler_2 = logging.StreamHandler(sys.stderr)
+# handler_2.setLevel(logging.ERROR)
+
+logger.addHandler(handler_debug)
+
+# app.logger.addHandler(handler_debug)
+# app.logger.addHandler(handler_2)
+
 # Define the main route of the web application 
 @app.route('/')
 def index():
@@ -38,6 +57,7 @@ def index():
 @app.route('/<int:post_id>')
 def post(post_id):
     post = get_post(post_id)
+    logger.info("Article "+"\""+post['title']+"\" retrieved!")
     if post is None:
       return render_template('404.html'), 404
     else:
@@ -64,9 +84,15 @@ def get_metrics():
     connection.close()
     return response
 
+@app.errorhandler(404)
+def no_page_found(e):
+    logger.error("A non-existing article is accessed and 404 is returned")
+    return render_template('404.html')
+
 # Define the About Us page
 @app.route('/about')
 def about():
+    logger.info('The "About us " page is accessed')
     return render_template('about.html')
 
 # Define the post creation functionality 
@@ -83,6 +109,7 @@ def create():
             connection.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
                          (title, content))
             connection.commit()
+            logger.info('New Page with title '+title+ ' created')
             connection.close()
             return redirect(url_for('index'))
 
