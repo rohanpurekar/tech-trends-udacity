@@ -2,7 +2,7 @@ FROM python:3.8
 
 LABEL dev="Rohan Purekar"
 
-COPY . /app
+COPY techtrends /app
 
 WORKDIR  /app
 
