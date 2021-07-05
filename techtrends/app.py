@@ -1,4 +1,6 @@
 import sqlite3
+from sqlite3.dbapi2 import Cursor, connect
+import sys
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 
@@ -46,6 +48,19 @@ def health_check():
         status=200,
         mimetype = 'application/json'
     )
+    return response
+
+@app.route('/metrics')
+def get_metrics():
+    connection = get_db_connection()
+    print(connection)
+    posts = len(connection.execute('SELECT * FROM posts').fetchall())
+    response=app.response_class(
+        response=json.dumps({"db_connections":1,"posts": posts}),
+        status=200,
+        mimetype = 'application/json'
+    )
+    connection.close()
     return response
 
 # Define the About Us page
