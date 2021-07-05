@@ -1,5 +1,4 @@
 import sqlite3
-
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 
@@ -39,6 +38,15 @@ def post(post_id):
       return render_template('404.html'), 404
     else:
       return render_template('post.html', post=post)
+
+@app.route('/healthz')
+def health_check():
+    response = app.response_class(
+        response=json.dumps({"result":"OK - healthy "}),
+        status=200,
+        mimetype = 'application/json'
+    )
+    return response
 
 # Define the About Us page
 @app.route('/about')
