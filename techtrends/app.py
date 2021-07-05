@@ -41,8 +41,6 @@ handler_err.setFormatter(handler_debug_formatter)
 
 logger.addHandler(handler_debug)
 
-# app.logger.addHandler(handler_debug)
-# app.logger.addHandler(handler_2)
 
 # Define the main route of the web application 
 @app.route('/')
