@@ -4,6 +4,7 @@ ENV["TERM"]="linux"
 Vagrant.configure("2") do |config|
   
   # set the image for the vagrant box
+  # Used ubuntu because I was facing installation problems on suse.
   config.vm.box = "bento/ubuntu-18.04"
   ## Set the image version
   #config.vm.box_version = "15.2.31.473"
