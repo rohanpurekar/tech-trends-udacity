@@ -61,11 +61,20 @@ def post(post_id):
     else:
       return render_template('post.html', post=post)
 
+##Standout Suggesion 1
 @app.route('/healthz')
 def health_check():
+    connection = get_db_connection()
+    try:
+        len(connection.execute('SELECT * FROM posts').fetchall())
+        message = "OK - healthy!"
+        status_code=200
+    except:
+        status_code=500
+        message = "ERROR - unhealthy"
     response = app.response_class(
-        response=json.dumps({"result":"OK - healthy "}),
-        status=200,
+        response=json.dumps({"result":message}),
+        status=status_code,
         mimetype = 'application/json'
     )
     return response
