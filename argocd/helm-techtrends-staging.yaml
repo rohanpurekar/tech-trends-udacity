@@ -11,7 +11,7 @@ spec:
   source:
     helm:
       valueFiles:
-      - values-staging.yml
+      - values-stage.yml
     path: helm/
     repoURL: https://github.com/rohanpurekar/tech-trends-udacity
     targetRevision: HEAD
