@@ -12,6 +12,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      ## Genrating tag dynamically Standout Suggeston 2
       - name: Generate build ID
         id: prep
         run: |
