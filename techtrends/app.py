@@ -93,7 +93,7 @@ def get_metrics():
 
 @app.errorhandler(404)
 def no_page_found(e):
-    logger.error("A non-existing article is accessed and 404 is returned")
+    # logger.error("A non-existing article is accessed and 404 is returned")
     return render_template('404.html')
 
 # Define the About Us page
