@@ -12,70 +12,21 @@ docker logs ab59a  # <- Container ID
 
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container 
-INFO:werkzeug:07/05/2021, 02:52:24  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
-INFO:werkzeug:07/05/2021, 02:52:30 172.17.0.1 - - [05/Jul/2021 14:52:30] "GET / HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:52:30,:A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:52:30 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:52:30 172.17.0.1 - - [05/Jul/2021 14:52:30] "GET /favicon.ico HTTP/1.1" 200 -
-INFO:werkzeug:07/05/2021, 02:52:39 172.17.0.1 - - [05/Jul/2021 14:52:39] "GET /metrics HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:52:39,:A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:52:39 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:52:39 172.17.0.1 - - [05/Jul/2021 14:52:39] "GET /favicon.ico HTTP/1.1" 200 -
-INFO:werkzeug:07/05/2021, 02:52:40 172.17.0.1 - - [05/Jul/2021 14:52:40] "GET /metrics HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:52:40,:A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:52:40 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:52:40 172.17.0.1 - - [05/Jul/2021 14:52:40] "GET /favicon.ico HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:52:43 A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:52:43,:A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:52:43 172.17.0.1 - - [05/Jul/2021 14:52:43] "GET /health HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:52:44 A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:52:44,:A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:52:44 172.17.0.1 - - [05/Jul/2021 14:52:44] "GET /favicon.ico HTTP/1.1" 200 -
-INFO:werkzeug:07/05/2021, 02:52:46 172.17.0.1 - - [05/Jul/2021 14:52:46] "GET /healthz HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:52:46,:A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:52:46 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:52:46 172.17.0.1 - - [05/Jul/2021 14:52:46] "GET /favicon.ico HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:53:13 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:53:13 172.17.0.1 - - [05/Jul/2021 14:53:13] "GET /favicon.ico HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:53:13,:A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:53:15 172.17.0.1 - - [05/Jul/2021 14:53:15] "GET /create HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:53:15 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:53:15 172.17.0.1 - - [05/Jul/2021 14:53:15] "GET /favicon.ico HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:53:15,:A non-existing article is accessed and 404 is returned
-INFO:app:07/05/2021, 02:53:24,:New Page with title test created
-INFO:app:07/05/2021, 02:53:24 New Page with title test created
-INFO:werkzeug:07/05/2021, 02:53:24 172.17.0.1 - - [05/Jul/2021 14:53:24] "POST /create HTTP/1.1" 302 -
-INFO:werkzeug:07/05/2021, 02:53:24 172.17.0.1 - - [05/Jul/2021 14:53:24] "GET / HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:53:24,:A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:53:24 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:53:24 172.17.0.1 - - [05/Jul/2021 14:53:24] "GET /favicon.ico HTTP/1.1" 200 -
-INFO:app:07/05/2021, 02:53:27 Article "test" retrieved!
-INFO:app:07/05/2021, 02:53:27,:Article "test" retrieved!
-INFO:werkzeug:07/05/2021, 02:53:27 172.17.0.1 - - [05/Jul/2021 14:53:27] "GET /7 HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:53:27,:A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:53:27 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:53:28 172.17.0.1 - - [05/Jul/2021 14:53:28] "GET /favicon.ico HTTP/1.1" 200 -
-INFO:app:07/05/2021, 02:53:36,:The "About us " page is accessed
-INFO:app:07/05/2021, 02:53:36 The "About us " page is accessed
-INFO:werkzeug:07/05/2021, 02:53:36 172.17.0.1 - - [05/Jul/2021 14:53:36] "GET /about HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:53:36,:A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:53:36 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:53:36 172.17.0.1 - - [05/Jul/2021 14:53:36] "GET /favicon.ico HTTP/1.1" 200 -
-INFO:werkzeug:07/05/2021, 02:53:38 172.17.0.1 - - [05/Jul/2021 14:53:38] "GET / HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:53:38,:A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:53:38 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:53:38 172.17.0.1 - - [05/Jul/2021 14:53:38] "GET /favicon.ico HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:53:41,:A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:53:41 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:53:41 172.17.0.1 - - [05/Jul/2021 14:53:41] "GET /asd HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:53:41,:A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:53:41 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:53:41 172.17.0.1 - - [05/Jul/2021 14:53:41] "GET /favicon.ico HTTP/1.1" 200 -
-INFO:werkzeug:07/05/2021, 02:53:48 172.17.0.1 - - [05/Jul/2021 14:53:48] "GET / HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:53:48,:A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:53:48 A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:53:48 172.17.0.1 - - [05/Jul/2021 14:53:48] "GET /favicon.ico HTTP/1.1" 200 -
-INFO:werkzeug:07/05/2021, 02:53:56 172.17.0.1 - - [05/Jul/2021 14:53:56] "GET /metrics HTTP/1.1" 200 -
-ERROR:app:07/05/2021, 02:53:57 A non-existing article is accessed and 404 is returned
-ERROR:app:07/05/2021, 02:53:57,:A non-existing article is accessed and 404 is returned
-INFO:werkzeug:07/05/2021, 02:53:57 172.17.0.1 - - [05/Jul/2021 14:53:57] "GET /favicon.ico HTTP/1.1" 200 -
+INFO:werkzeug:07/09/2021, 02:29:17  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:07/09/2021, 02:29:33 172.17.0.1 - - [09/Jul/2021 02:29:33] "GET /asd HTTP/1.1" 404 -
+INFO:werkzeug:07/09/2021, 02:29:33 172.17.0.1 - - [09/Jul/2021 02:29:33] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:07/09/2021, 02:29:34 172.17.0.1 - - [09/Jul/2021 02:29:34] "GET /asd HTTP/1.1" 404 -
+INFO:werkzeug:07/09/2021, 02:29:34 172.17.0.1 - - [09/Jul/2021 02:29:34] "GET /asd HTTP/1.1" 404 -
+INFO:app:07/09/2021, 02:29:36,:The "About us " page is accessed
+INFO:app:07/09/2021, 02:29:36 The "About us " page is accessed
+INFO:werkzeug:07/09/2021, 02:29:36 172.17.0.1 - - [09/Jul/2021 02:29:36] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:07/09/2021, 02:29:39 172.17.0.1 - - [09/Jul/2021 02:29:39] "GET / HTTP/1.1" 200 -
+INFO:app:07/09/2021, 02:29:40,:Article "2020 CNCF Annual Report" retrieved!
+INFO:app:07/09/2021, 02:29:40 Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:07/09/2021, 02:29:40 172.17.0.1 - - [09/Jul/2021 02:29:40] "GET /1 HTTP/1.1" 200 -
+INFO:app:07/09/2021, 02:47:38,:Article "2020 CNCF Annual Report" retrieved!
+INFO:app:07/09/2021, 02:47:38 Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:07/09/2021, 02:47:38 172.17.0.1 - - [09/Jul/2021 02:47:38] "GET /1 HTTP/1.1" 200 -
+INFO:app:07/09/2021, 02:47:38,:Article "2020 CNCF Annual Report" retrieved!
+INFO:app:07/09/2021, 02:47:38 Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:07/09/2021, 02:47:38 172.17.0.1 - - [09/Jul/2021 02:47:38] "GET /1 HTTP/1.1" 200 -
