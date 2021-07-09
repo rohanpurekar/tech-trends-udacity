@@ -55,10 +55,10 @@ def index():
 @app.route('/<int:post_id>')
 def post(post_id):
     post = get_post(post_id)
-    logger.info("Article "+"\""+post['title']+"\" retrieved!")
     if post is None:
       return render_template('404.html'), 404
     else:
+      logger.info("Article "+"\""+post['title']+"\" retrieved!")
       return render_template('post.html', post=post)
 
 ##Standout Suggesion 1
